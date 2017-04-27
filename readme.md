@@ -1,47 +1,35 @@
-**less-module-structure**<br>
+<h1>less-module-structure**</h1>
 _Using <a href="https://github.com/evernote/less-build-structure">evernoteless</a>
 and Gulp._
 
-**Installation**
+<h2>Installation</h2>
 1) npm install
 2) npm install -g gulp
 
-**Usage**
-
-1) Default configuration in gulpfile.js:
+<h2>Usage</h2>
+<strong>Configuration:</strong>
 ```js
 var evernotelessConfig = {
+    // system config
     evernotelessCorePath: "./evernoteless",
-    evernotelessBlangPage: "./evernoteless/blank-page",
-    lessSrc: "./src/less"
+    evernotelessBlankPage: "./evernoteless/blank-page",
+    evernotelessBlankModule: "./evernoteless/blank-module",
+    // users config
+    lessSrc: "./src/less" // path to your less project
 };
 ```
-For creating new less structure run:
+
+<strong>Creating pages:</strong>
 ```sh
-gulp create-less-page --path hello
+gulp create-less-page --path=hello
 ```
-Ater gulp task generate evernoteless LESS structure in _lessSrc_ witn name "hello"
+Ater gulp task generate custom evernoteless LESS page structure in src/less.
 
-2) For creating in other directories configurate _evernotelessConfig_ in
-_gulpfile.js_ and use _--path_ parameters:
-
-Example:<br>
-Configuration in gulpfile.js:
-```js
-var evernotelessConfig = {
-    evernotelessCorePath: "./evernoteless",
-    evernotelessBlangPage: "./evernoteless/blank-page",
-    lessSrc: "./src/less/myapp"
-};
-```
-Creating less path commands:
+<strong>Creating modules:</strong>
 ```sh
-# create ./src/less/myapp/navbar with less structure
-gulp create-less-page --path navbar
-
-# create ./src/less/myapp/page/index with less structure
-gulp create-less-page --path navbar/index
+gulp create-less-page --page=hello --name=world
 ```
+Ater gulp task generate evernoteless LESS structure in src/less/hello.
 
-Links:
+<h2>Links:</h2>
 https://github.com/evernote/less-build-structure
