@@ -1,14 +1,14 @@
-<h1>less-module-structure**</h1>
-_Using <a href="https://github.com/evernote/less-build-structure">evernoteless</a>
-and Gulp._
+<h1>less-module-structure</h1>
+Using <a href="https://github.com/evernote/less-build-structure">evernoteless</a>
+and Gulp.
 
 <h2>Installation</h2>
-1) npm install
+1) npm install<br>
 2) npm install -g gulp
 
 <h2>Usage</h2>
 <strong>Configuration:</strong>
-```js
+```sh
 var evernotelessConfig = {
     // system config
     evernotelessCorePath: "./evernoteless",
