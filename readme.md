@@ -8,7 +8,7 @@ and Gulp.
 
 <h2>Usage</h2>
 <strong>Configuration:</strong>
-```sh
+```
 var evernotelessConfig = {
     // system config
     evernotelessCorePath: "./evernoteless",
