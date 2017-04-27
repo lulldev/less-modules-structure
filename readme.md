@@ -8,14 +8,12 @@ and Gulp.
 
 <h2>Usage</h2>
 <strong>Configuration:</strong>
-```
+```js
 var evernotelessConfig = {
-    // system config
     evernotelessCorePath: "./evernoteless",
     evernotelessBlankPage: "./evernoteless/blank-page",
     evernotelessBlankModule: "./evernoteless/blank-module",
-    // users config
-    lessSrc: "./src/less" // path to your less project
+    lessSrc: "./src/less"
 };
 ```
 
