@@ -7,6 +7,7 @@ and Gulp.
 2) npm install -g gulp
 
 <h2>Usage</h2>
+
 <strong>Create blank project:</strong>
 ```sh
 gulp create-less-project --name=my_project
@@ -26,7 +27,8 @@ gulp create-less-module --project=my_project --page=my_page --name=my_module
 ```
 This command create local module for page in project. All parameters are required.
 
-<strong>Creating global module (for all project:</strong>
+<strong>Creating global module (for all project):</strong>
+
 Blank project by default has a folder **global_modules**. If you call
 _create-less-module_ without _--page_ - task generate global module.
 ```sh
