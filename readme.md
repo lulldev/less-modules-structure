@@ -7,27 +7,31 @@ and Gulp.
 2) npm install -g gulp
 
 <h2>Usage</h2>
-<strong>Configuration:</strong>
-```js
-var evernotelessConfig = {
-    evernotelessCorePath: "./evernoteless",
-    evernotelessBlankPage: "./evernoteless/blank-page",
-    evernotelessBlankModule: "./evernoteless/blank-module",
-    lessSrc: "./src/less"
-};
+<strong>Create blank project:</strong>
+```sh
+gulp create-less-project --name=my_project
 ```
+This task create new blank project in src (using lessSrc parameter in evernotelessConfig in gulpfile.js)
 
 <strong>Creating pages:</strong>
 ```sh
-gulp create-less-page --path=hello
+gulp create-less-page --project=your_project --name=my_page
 ```
-Ater gulp task generate custom evernoteless LESS page structure in src/less.
+Ater gulp task generate custom evernoteless LESS page structure in src/less in
+your project.
 
-<strong>Creating modules:</strong>
+<strong>Creating local modules (for pages):</strong>
 ```sh
-gulp create-less-page --page=hello --name=world
+gulp create-less-module --project=my_project --page=my_page --name=my_module
 ```
-Ater gulp task generate evernoteless LESS structure in src/less/hello.
+This command create local module for page in project. All parameters are required.
+
+<strong>Creating global module (for all project:</strong>
+Blank project by default has a folder **global_modules**. If you call
+_create-less-module_ without _--page_ - task generate global module.
+```sh
+gulp create-less-module --project=my_project --name=my_module
+```
 
 <h2>Links:</h2>
 https://github.com/evernote/less-build-structure
