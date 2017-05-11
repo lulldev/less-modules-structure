@@ -13,7 +13,6 @@
     "gulp-copy": "^1.0.0",
     "gulp-csslint": "^1.0.0",
     "gulp-file-copy": "0.0.1",
-    "gulp-inline-fonts": "^1.0.4",
     "gulp-less": "^3.3.0",
     "gulp-less-import": "^1.0.0",
     "gulp-rename": "^1.2.2",

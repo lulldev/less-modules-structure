@@ -4,7 +4,6 @@ var copy = require('gulp-copy');
 
 var gulp = require("gulp"),
   minify = require("gulp-clean-css"),
-  inlineFonts = require('gulp-inline-fonts'),
   lessImport = require('gulp-less-import'),
   less = require("gulp-less"),
   concat = require("gulp-concat");
@@ -46,15 +45,15 @@ gulp.task("create-less-module", function() {
 });
 
 gulp.task("minify-less", function () {
-  return gulp.src("./src/less/esthetic/**/*.less")
-	.pipe(lessImport("./src/less/esthetic/**/*.less"))
+  return gulp.src(evernotelessConfig.lessSrc + '/**/*.less')
+	.pipe(lessImport(evernotelessConfig.lessSrc + '/**/*.less'))
 	.pipe(less())
-    .pipe(concat("est.min.css"))
+    .pipe(concat("style.min.css"))
     .pipe(minify())
     .pipe(gulp.dest("./build"));
 });
 
 gulp.task("build", ["minify-less"], function () {
-  return gulp.src(['!./src/less/**/*', './src/**/*', './src/*.html'])
+  return gulp.src(['!.'+ evernotelessConfig.lessSrc + '/**/*', './src/**/*', './src/*.html'])
   .pipe(gulp.dest('./build'));
 });
