@@ -18,7 +18,7 @@ This task create new blank project in src (using lessSrc parameter in evernotele
 ```sh
 gulp create-less-page --project=your_project --name=my_page
 ```
-Ater gulp task generate custom evernoteless LESS page structure in src/less in
+Ater gulp task generate custom evernoteless LESS page structure to page directory in
 your project.
 
 <strong>Creating local modules (for pages):</strong>

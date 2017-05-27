@@ -29,7 +29,7 @@ gulp.task("create-less-page", function() {
     var name = argv.name;
     if (!!project && !!name) {
         gulp.src(evernotelessConfig.evernotelessBlankPage + "/**/*")
-             .pipe(gulp.dest(evernotelessConfig.lessSrc + "/" + project + "/" + name));
+             .pipe(gulp.dest(evernotelessConfig.lessSrc + "/" + project + "/pages/" + name));
     }
 });
 
